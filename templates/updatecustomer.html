@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Animated CSS */
+    .form-group {
+      animation: slideInUp 1s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    /* Custom CSS */
+    body {
+            background-image: url("https://wallpaperaccess.com/full/2374139.jpg");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            height: auto;
+            width: auto;
+        }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000dff;
+    }
+
+    .form-group {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #e1df51;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e1df51;
+    }
+  </style>
+</head>
+<body>
+  <h1>Update Customer</h1>
+  <div class="form-group">
+    <form action="/update-customer" method="POST">
+      <label for="customerid">Customer ID:</label>
+      <input type="text" id="customerid" name="customerid" required>
+
+      <label for="change">Change:</label>
+      <select id="change" name="change" required>
+        <option value="CUSTOMER_NAME">Customer Name</option>
+        <option value="CUSTOMER_ADDR">Customer Address</option>
+        <option value="CUSTOMER_MAIL">Customer Email</option>
+      </select>
+
+      <label for="newvalue">New Value:</label>
+      <input type="text" id="newvalue" name="newvalue" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

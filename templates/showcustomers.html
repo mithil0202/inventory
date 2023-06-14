@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Customers</title>
+    <style>
+        /* CSS Styles */
+        body {
+            background-image: url("https://wallpaperaccess.com/full/2374139.jpg");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: visible;
+            
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #000000;
+        }
+        
+        .table-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th{
+            padding: 10px;
+            border: 1px solid #000000;
+            color: #000000;
+        }
+         td {
+            padding: 10px;
+            border: 1px solid #000000;
+            color: #ff0000;
+            background-color: #ffffff;
+        }
+        
+        th {
+            background-color: #ffffff;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Customers</h1>
+    
+    <div class="table-container fade-in">
+        <table>
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Customer Address</th>
+                <th>Customer Email</th>
+            </tr>
+            {% for customer in data %}
+                <tr>
+                    <td>{{ customer.customer_id }}</td>
+                    <td>{{ customer.customer_name }}</td>
+                    <td>{{ customer.customer_addr }}</td>
+                    <td>{{ customer.customer_mail }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

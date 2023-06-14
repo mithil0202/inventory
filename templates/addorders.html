@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Order</title>
+    <style>
+                body {
+            background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: visible;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Order</h2>
+        <form action="/add-orders" method="POST">
+            <div class="form-group">
+                <label for="productid">Product ID:</label>
+                <input type="text" id="productid" name="productid" required>
+            </div>
+            <div class="form-group">
+                <label for="customerid">Customer ID:</label>
+                <input type="text" id="customerid" name="customerid" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="text" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Add Order</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+        body {
+            background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            height: auto;
+            width: auto;
+        }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #ff4d4d;
+      color: white;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #ff3333;
+    }
+
+    /* CSS Animations */
+    .animated-container {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    .fade-in {
+      animation-name: fadeIn;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <h2>Delete Order</h2>
+    <form action="/delete-order" method="POST" class="animated-container fade-in">
+      <div class="form-group">
+        <label for="orderid">Order ID:</label>
+        <input type="text" id="orderid" name="orderid" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Delete">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

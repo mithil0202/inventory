@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Web App</title>
+    <style>
+        /* CSS Styles */
+        body {
+            background-image: url("https://wallpaperaccess.com/full/2374139.jpg");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            height: auto;
+            width: auto;
+        }
+        .section {
+            margin-top: 200px;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .option {
+            margin: 10px;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #000000;
+            transition: background-color 0.3s;
+        }
+        
+        .option:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>  
+<div class="section fade-in">
+    <h2>Customer Section</h2>
+    <div class="options">
+        <a class="option" href="/add-customer">Add</a>
+        <a class="option" href="/update-customer">Update</a>
+        <a class="option" href="/delete-customer">Delete</a>
+        <a class="option" href="/show-customers">Show</a>
+    </div>
+</div>
+</body>
+</html>

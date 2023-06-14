@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Orders</title>
+    <style>
+        /* CSS Styles */
+        body {
+            background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: visible;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .table-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 10px;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        
+        th {
+            background-color: #FFA500;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+  <h1>Show Orders</h1>
+
+  <table id="order-table">
+    <tr>
+      <th>Order ID</th>
+      <th>Product ID</th>
+      <th>Customer ID</th>
+      <th>Quantity</th>
+    </tr>
+    {% for order in data %}
+    <tr>
+      <td>{{ order.ORDER_ID }}</td>
+      <td>{{ order.PRODUCT_ID }}</td>
+      <td>{{ order.CUSTOMER_ID }}</td>
+      <td>{{ order.QUANTITY }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <script>
+    // JavaScript code
+    // Fetch orders from the Flask backend
+    fetch('/showorders')
+      .then(response => response.json())
+      .then(data => {
+        // Store the data in a JavaScript variable
+        const orders = data;
+        
+        // Get the table element
+        const table = document.getElementById('order-table');
+
+        // Generate HTML rows for each order
+        orders.forEach(order => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${order.ORDER_ID}</td>
+            <td>${order.PRODUCT_ID}</td>
+            <td>${order.CUSTOMER_ID}</td>
+            <td>${order.QUANTITY}</td>
+          `;
+          table.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  </script>
+</body>
+</html>

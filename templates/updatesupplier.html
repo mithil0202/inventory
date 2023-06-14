@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Supplier</title>
+    <style>
+        body {
+            background-image: url("https://media.istockphoto.com/id/1304746031/photo/taking-better-control-with-technology.jpg?b=1&s=612x612&w=0&k=20&c=7k4UjyPMyD08OxdBi8Hu5JIkwwSg0M7rjEbOVpTUGV4=");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            height: auto;
+            width: auto;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Supplier</h1>
+        <form action="/update-supplier" method="POST">
+            <label for="suppliertid">Suplier ID:</label>
+            <input type="text" id="supplierid" name="supplierid" placeholder="Enter Supplier ID" required>
+            
+            <label for="change">Change Option:</label>
+            <select id="change" name="change" required>
+                <option value="">Select Option</option>
+                <option value="SUPLIER_NAME">Suplier Name</option>
+                <option value="SUPLIER_ADDR">Suplier Address</option>
+                <option value="SUPLIER_MAIL">Suplier mail</option>
+            </select>
+
+            <label for="newvalue">New Value:</label>
+            <input type="text" id="newvalue" name="newvalue" placeholder="Enter New Value" required>
+            
+            <input class="submit-btn" type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Customers</title>
+    <style>
+        /* CSS Styles */
+        body {
+            background-image: url("https://media.istockphoto.com/id/1304746031/photo/taking-better-control-with-technology.jpg?b=1&s=612x612&w=0&k=20&c=7k4UjyPMyD08OxdBi8Hu5JIkwwSg0M7rjEbOVpTUGV4=");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: visible;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .table-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th{
+            padding: 10px;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #000000;
+            color: #ff0000;
+            background-color: #ffffff;
+        }
+        th {
+            background-color: #FFA500;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+  <h1>Show Suppliers</h1>
+
+  <table id="suplier-table">
+    <tr>
+      <th>Suplier ID</th>
+      <th>Suplier Name</th>
+      <th>Suplier Address</th>
+      <th>Suplier Email</th>
+    </tr>
+    {% for suplier in data %}
+    <tr>
+      <td>{{ suplier.SUPPLIER_ID }}</td>
+      <td>{{ suplier.SUPPLIER_NAME }}</td>
+      <td>{{ suplier.SUPPLIER_ADDR }}</td>
+      <td>{{ suplier.SUPPLIER_MAIL }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

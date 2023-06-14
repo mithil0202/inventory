@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+        body {
+            background-image: url("https://media.istockphoto.com/id/1304746031/photo/taking-better-control-with-technology.jpg?b=1&s=612x612&w=0&k=20&c=7k4UjyPMyD08OxdBi8Hu5JIkwwSg0M7rjEbOVpTUGV4=");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            height: auto;
+            width: auto;
+        }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #ff4747;
+      color: white;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #cc0000;
+    }
+
+    /* CSS Animations */
+    .animated-container {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    .fade-in {
+      animation-name: fadeIn;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <h2>Delete Supplier</h2>
+    <form action="/delete-supplier" method="POST" class="animated-container fade-in">
+      <div class="form-group">
+        <label for="supplierid">Supplier ID:</label>
+        <input type="text" id="supplierid" name="supplierid" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Delete Supplier">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

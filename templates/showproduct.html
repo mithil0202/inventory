@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Show Products</title>
+    <style>
+        /* CSS Styles for animations and templates */
+        .fade-in {
+            animation: fadeIn ease 1s;
+            -webkit-animation: fadeIn ease 1s;
+            -moz-animation: fadeIn ease 1s;
+            -o-animation: fadeIn ease 1s;
+            -ms-animation: fadeIn ease 1s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* CSS Styles for the product table */
+        .product-table {
+            margin-bottom: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .product-table th {
+            background-color:  #9dfab3;
+            color: #fff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .product-table td {
+            background-color: #f7f7f7;
+            color: #000;
+            padding: 10px;
+        }
+
+        /* CSS Styles for the business logo background */
+        body {
+            background-image: url("https://media.istockphoto.com/id/1311600080/photo/small-shipping-packages-on-a-notebook-with-the-inscription-online-shopping.jpg?s=612x612&w=0&k=20&c=vDPqIQsqzCvEaEZF2R5IeGz_8Gv-YRI_HzbKux8TaqM=");
+            background-size: cover;
+            background-position: unset;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            height: auto;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fade-in">
+        <h1 style="color:  #000000;"><center>Product List</center></h1>
+        <table class="product-table">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Stock</th>
+                <th>Suplier ID</th>
+
+            </tr>
+            {% for products in data %}
+            <tr>
+                <td>{{ products['product_id'] }}</td>
+                <td>{{ products['product_name'] }}</td>
+                <td>{{ products['product_stock'] }}</td>
+                <td>{{ products['product_price'] }}</td>
+                <td>{{ products['product_suplierid'] }}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
