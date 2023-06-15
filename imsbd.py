@@ -10,7 +10,7 @@ cur = conn.cursor()
 #
 #cur.execute('''create table products(product_id varchar(30) ,product_name varchar(50),price float,stock int,suplier_id varchar(30))''')
 #
-cur.execute('''create table suplier(suplier_id varchar(30)  ,suplier_name varchar(30),suplier_addr varchar(50),suplier_mail varchar(50))''')
+#cur.execute('''create table suplier(suplier_id varchar(30)  ,suplier_name varchar(30),suplier_addr varchar(50),suplier_mail varchar(50))''')
 #
 #cur.execute('''insert into customer(customer_id,customer_name,customer_addr,customer_mail) values ('CUS1','mithil','knr','mithilreddy0202@gmail.com')''')
 #
@@ -18,6 +18,7 @@ cur.execute('''create table suplier(suplier_id varchar(30)  ,suplier_name varcha
 #
 #cur.execute('''insert into orders values ('ORD1','PRD1','CUS1',10)''')
 #
-cur.execute('''insert into suplier values ('SUP1','mithil reddy','hyd','mithilreddy0202@gmail.com')''')
+#cur.execute('''insert into suplier values ('SUP1','mithil reddy','hyd','mithilreddy0202@gmail.com')''')
 #cur.execute('drop table suplier')
+#cur.execute('''update products set product_id = 'PRO1' where product_id = 'PRD1' ''')
 conn.commit()
