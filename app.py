@@ -153,7 +153,7 @@ def addorders():
         cn.execute(f"insert into orders(order_id,product_id,customer_id,quantity) values('{id}','{productid}','{customerid}','{quantity}')")
         conn.commit()
         print('Data as been Inserted')
-        return jsonify({'message':'sucessfull'})
+        return render_template('success.html', message='Data has been Inserted Successfully')
     else:
         return render_template('addorders.html')
 
@@ -171,7 +171,7 @@ def addsuplier():
         cn.execute(f"insert into suplier(suplier_id,suplier_name,suplier_addr,suplier_mail) values('{id}','{supliername}','{suplieraddr}','{supliermail}')")
         conn.commit()
         print('Data as been Inserted')
-        return jsonify({'message':'sucessfull'})
+        return render_template('success.html', message='Data has been Inserted Successfully')
     else:
         return render_template('addsuplier.html')
 
@@ -190,7 +190,7 @@ def addproduct():
         cn.execute(f"insert into products(product_id,product_name,price,stock,suplier_id) values('{id}','{productname}','{price}','{stock}','{suplierid}')")
         conn.commit()
         print('Data as been Inserted')
-        return jsonify({'message':'sucessfull'})
+        return render_template('success.html', message='Data has been Inserted Successfully')
     else:
         return render_template('addproduct.html')
 
@@ -210,7 +210,7 @@ def updatecustomer():
         cn.execute(f"UPDATE CUSTOMER SET {change} = '{newvalue}' where customer_id = '{CUSTOMER_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Updated Successfully')
     else:
         return render_template('updatecustomer.html')
     
@@ -233,7 +233,7 @@ def updateproduct():
         cn.execute(f"UPDATE PRODUCTS SET {change} = '{newvalue}' where product_id = '{PRODUCT_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Updated Successfully')
     else:
         return render_template('updateproduct.html')
     
@@ -254,7 +254,7 @@ def updateorder():
         cn.execute(f"UPDATE ORDERS SET {change} = '{newvalue}' where order_id = '{ORDER_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Updated Successfully')
     else:
         return render_template('updateorder.html')
     
@@ -275,7 +275,7 @@ def updatesupplier():
         cn.execute(f"UPDATE SUPLIER SET {change} = '{newvalue}' where suplier_id = '{SUPPLIER_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Updated Successfully')
     else:
         return render_template('updatesupplier.html')
     
@@ -290,7 +290,7 @@ def deletecustomer():
         cn.execute(f"DELETE FROM CUSTOMER WHERE customer_id = '{CUSTOMER_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Deleted Successfully')
     else:
         return render_template('deletecustomer.html')
 
@@ -305,7 +305,7 @@ def deleteproduct():
         cn.execute(f"DELETE FROM PRODUCTS WHERE product_id = '{PRODUCT_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Deleted Successfully')
     else:
         return render_template('deleteproduct.html')
 
@@ -320,7 +320,7 @@ def deleteorder():
         cn.execute(f"DELETE FROM ORDERS WHERE order_id = '{ORDER_ID}'")
         conn.commit()
         print('data inserted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Deleted Successfully')
     else:
         return render_template('deleteorder.html')
 
@@ -335,7 +335,7 @@ def deletesupplier():
         cn.execute(f"DELETE FROM SUPLIER WHERE suplier_id = '{SUPPLIER_ID}'")
         conn.commit()
         print('data has been deleted')
-        return jsonify({'message':'successful'})
+        return render_template('success.html', message='Data has been Deleted Successfully')
     else:
         return render_template('deletesupplier.html')
 
