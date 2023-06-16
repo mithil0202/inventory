@@ -135,7 +135,7 @@ def addcustomer():
         cn.execute(f"insert into customer(customer_id,customer_name,customer_addr,customer_mail) values('{id}','{customername}','{customeraddr}','{customermail}')")
         conn.commit()
         print('Data has been Inserted')
-        return jsonify({'message':'sucessfull'})
+        return render_template('success.html', message='Data has been Inserted Successfully')
     else:
         return render_template('addcustomer.html')
     
