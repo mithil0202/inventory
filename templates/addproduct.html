@@ -5,12 +5,12 @@
   <style>
     /* CSS styles */
     body {
-            background-image: url("https://media.istockphoto.com/id/1311600080/photo/small-shipping-packages-on-a-notebook-with-the-inscription-online-shopping.jpg?s=612x612&w=0&k=20&c=vDPqIQsqzCvEaEZF2R5IeGz_8Gv-YRI_HzbKux8TaqM=");
-            background-size: cover;
-            background-position: unset;
-            background-repeat: no-repeat;
-            backface-visibility: visible;
-        }
+        background-image: url("https://media.istockphoto.com/id/1311600080/photo/small-shipping-packages-on-a-notebook-with-the-inscription-online-shopping.jpg?s=612x612&w=0&k=20&c=vDPqIQsqzCvEaEZF2R5IeGz_8Gv-YRI_HzbKux8TaqM=");
+        background-size: cover;
+        background-position: unset;
+        background-repeat: no-repeat;
+        backface-visibility: visible;
+    }
     h1 {
       color: #333;
       text-align: center;
@@ -23,12 +23,17 @@
       background-color: #fff;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
 
     label {
       display: block;
       margin-bottom: 10px;
       font-weight: bold;
+      flex: 0 0 100%;
     }
 
     input[type="text"],
@@ -47,9 +52,26 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      flex: 0 0 auto;
+      margin-right: 10px;
     }
 
     button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    a.button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    a.button:hover {
       background-color: #45a049;
     }
   </style>
@@ -71,6 +93,7 @@
     <input type="text" id="product_suplierid" name="product_suplierid" required>
 
     <button type="submit">Add Product</button>
+    <a href="/products" class="button">Go Back</a>
   </form>
 </body>
 </html>

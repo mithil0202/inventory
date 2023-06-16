@@ -3,13 +3,14 @@
 <head>
     <title>Add Order</title>
     <style>
-                body {
+        body {
             background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
             background-size: cover;
             background-position: unset;
             background-repeat: no-repeat;
             backface-visibility: visible;
         }
+        
         .container {
             max-width: 500px;
             margin: 0 auto;
@@ -26,6 +27,9 @@
         
         .form-group {
             margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .form-group label {
@@ -42,9 +46,10 @@
             border: 1px solid #ccc;
         }
         
-        .form-group button {
+        .form-group button, .form-group a {
+            flex: 1;
             display: block;
-            width: 100%;
+            margin-right: 10px;
             padding: 10px;
             font-size: 16px;
             color: #fff;
@@ -52,6 +57,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-decoration: none;
+            text-align: center;
         }
     </style>
 </head>
@@ -73,6 +80,7 @@
             </div>
             <div class="form-group">
                 <button type="submit">Add Order</button>
+                <a href="/orders" class="button">Go Back</a>
             </div>
         </form>
     </div>

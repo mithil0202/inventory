@@ -12,7 +12,6 @@
             backface-visibility: hidden;
         }
         
-        
         h1 {
             text-align: center;
             color: #4000ff;
@@ -25,10 +24,16 @@
             background-color: none;
             padding: 20px;
             border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .form-group {
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .form-group label {
@@ -46,7 +51,13 @@
             border-radius: 4px;
         }
         
-        .form-group input[type="submit"] {
+        .form-group .button-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .form-group input[type="submit"],
+        .form-group a[class="button"] {
             background-color: #4caf50;
             color: white;
             border: none;
@@ -55,8 +66,19 @@
             border-radius: 4px;
         }
         
-        .form-group input[type="submit"]:hover {
+        .form-group input[type="submit"]:hover,
+        .form-group a[class="button"]:hover {
             background-color: #45a049;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
     </style>
 </head>
@@ -77,7 +99,10 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <input type="submit" value="Submit">
+                <div class="button-container">
+                    <input type="submit" value="Submit">
+                    <a href="/customers" class="button">Go Back</a>
+                </div>
             </div>
         </form>
     </div>
