@@ -63,9 +63,14 @@
             margin-bottom: 20px;
         }
 
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .submit-btn {
-            display: block;
-            width: 100%;
+            width: 48%;
             padding: 10px;
             background-color: #4caf50;
             color: #fff;
@@ -79,28 +84,47 @@
         .submit-btn:hover {
             background-color: #45a049;
         }
+
+        .go-back-btn {
+            width: 48%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .go-back-btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Update Supplier</h1>
         <form action="/update-supplier" method="POST">
-            <label for="suppliertid">Suplier ID:</label>
+            <label for="supplierid">Supplier ID:</label>
             <input type="text" id="supplierid" name="supplierid" placeholder="Enter Supplier ID" required>
             
             <label for="change">Change Option:</label>
             <select id="change" name="change" required>
                 <option value="">Select Option</option>
-                <option value="SUPLIER_NAME">Suplier Name</option>
-                <option value="SUPLIER_ADDR">Suplier Address</option>
-                <option value="SUPLIER_MAIL">Suplier mail</option>
+                <option value="SUPLIER_NAME">Supplier Name</option>
+                <option value="SUPLIER_ADDR">Supplier Address</option>
+                <option value="SUPLIER_MAIL">Supplier Mail</option>
             </select>
 
             <label for="newvalue">New Value:</label>
             <input type="text" id="newvalue" name="newvalue" placeholder="Enter New Value" required>
             
-            <input class="submit-btn" type="submit" value="Update">
-            <a href="/supplier" class="button">Go Back</a>
+            <div class="btn-container">
+                <a href="/supliers" class="go-back-btn">Go Back</a>
+                <input class="submit-btn" type="submit" value="Update">
+            </div>
         </form>
     </div>
 </body>

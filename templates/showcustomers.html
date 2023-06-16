@@ -10,7 +10,6 @@
             background-position: unset;
             background-repeat: no-repeat;
             backface-visibility: visible;
-            
         }
         
         h1 {
@@ -29,12 +28,13 @@
             border-collapse: collapse;
         }
         
-        th{
+        th {
             padding: 10px;
             border: 1px solid #000000;
             color: #000000;
         }
-         td {
+        
+        td {
             padding: 10px;
             border: 1px solid #000000;
             color: #ff0000;
@@ -72,10 +72,27 @@
         .slide-in {
             animation: slideIn 1s ease-in-out;
         }
+        
+        /* Home Button */
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
     <h1>Show Customers</h1>
+
+    <!-- Home Button -->
+    <a href="/customers" class="home-button">Back</a>
     
     <div class="table-container fade-in">
         <table>

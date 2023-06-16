@@ -2,15 +2,15 @@
 <html>
 <head>
   <style>
-        body {
-            background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
-            background-size: cover;
-            background-position: unset;
-            background-repeat: no-repeat;
-            backface-visibility: hidden;
-            height: auto;
-            width: auto;
-        }
+    body {
+        background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
+        background-size: cover;
+        background-position: unset;
+        background-repeat: no-repeat;
+        backface-visibility: hidden;
+        height: auto;
+        width: auto;
+    }
 
     .container {
       max-width: 400px;
@@ -83,6 +83,39 @@
         opacity: 1;
       }
     }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .go-back-btn {
+      display: inline-block;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
@@ -106,9 +139,9 @@
         <label for="newvalue">New Value:</label>
         <input type="text" id="newvalue" name="newvalue" required>
       </div>
-      <div class="form-group">
-        <input type="submit" value="Submit">
-        <a href="/orders" class="button">Go Back</a>
+      <div class="form-group btn-container">
+        <a href="/orders" class="go-back-btn">Go Back</a>
+        <input type="submit" value="Submit" class="submit-btn">
       </div>
     </form>
   </div>

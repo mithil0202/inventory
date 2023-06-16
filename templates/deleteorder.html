@@ -2,15 +2,17 @@
 <html>
 <head>
   <style>
-        body {
-            background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
-            background-size: cover;
-            background-position: unset;
-            background-repeat: no-repeat;
-            backface-visibility: hidden;
-            height: auto;
-            width: auto;
-        }
+    /* Custom CSS */
+    body {
+      background-image: url("https://www.deccanherald.com/sites/dh/files/styles/article_detail/public/articleimages/2020/07/01/file7a522tkb2at18s5vm7sd-1593545085.jpg?itok=q45yO6U2");
+      background-size: cover;
+      background-position: unset;
+      background-repeat: no-repeat;
+      backface-visibility: hidden;
+      height: auto;
+      width: auto;
+    }
+
     .container {
       max-width: 400px;
       margin: 0 auto;
@@ -43,13 +45,33 @@
       border-radius: 5px;
     }
 
-    .form-group input[type="submit"] {
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .go-back-btn {
+      display: inline-block;
+      padding: 10px;
       background-color: #ff4d4d;
       color: white;
+      text-decoration: none;
+      border-radius: 5px;
       cursor: pointer;
     }
 
-    .form-group input[type="submit"]:hover {
+    .delete-btn {
+      display: inline-block;
+      padding: 10px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
       background-color: #ff3333;
     }
 
@@ -81,9 +103,9 @@
         <label for="orderid">Order ID:</label>
         <input type="text" id="orderid" name="orderid" required>
       </div>
-      <div class="form-group">
-        <input type="submit" value="Delete">
-        <a href="/orders" class="button">Go Back</a>
+      <div class="btn-container">
+        <a href="/orders" class="go-back-btn">Go Back</a>
+        <input type="submit" value="Delete" class="delete-btn">
       </div>
     </form>
   </div>

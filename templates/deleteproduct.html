@@ -2,15 +2,16 @@
 <html>
 <head>
   <style>
-        body {
-            background-image: url("https://media.istockphoto.com/id/1311600080/photo/small-shipping-packages-on-a-notebook-with-the-inscription-online-shopping.jpg?s=612x612&w=0&k=20&c=vDPqIQsqzCvEaEZF2R5IeGz_8Gv-YRI_HzbKux8TaqM=");
-            background-size: cover;
-            background-position: unset;
-            background-repeat: no-repeat;
-            backface-visibility: hidden;
-            height: auto;
-            width: auto;
-        }
+    /* Custom CSS */
+    body {
+      background-image: url("https://media.istockphoto.com/id/1311600080/photo/small-shipping-packages-on-a-notebook-with-the-inscription-online-shopping.jpg?s=612x612&w=0&k=20&c=vDPqIQsqzCvEaEZF2R5IeGz_8Gv-YRI_HzbKux8TaqM=");
+      background-size: cover;
+      background-position: unset;
+      background-repeat: no-repeat;
+      backface-visibility: hidden;
+      height: auto;
+      width: auto;
+    }
 
     .container {
       max-width: 400px;
@@ -44,13 +45,33 @@
       border-radius: 5px;
     }
 
-    .form-group input[type="submit"] {
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .go-back-btn {
+      display: inline-block;
+      padding: 10px;
       background-color: #f44336;
       color: white;
+      text-decoration: none;
+      border-radius: 5px;
       cursor: pointer;
     }
 
-    .form-group input[type="submit"]:hover {
+    .delete-btn {
+      display: inline-block;
+      padding: 10px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
       background-color: #d32f2f;
     }
 
@@ -82,9 +103,9 @@
         <label for="productid">Product ID:</label>
         <input type="text" id="productid" name="productid" required>
       </div>
-      <div class="form-group">
-        <input type="submit" value="Delete">
-        <a href="/products" class="button">Go Back</a>
+      <div class="btn-container">
+        <a href="/products" class="go-back-btn">Go Back</a>
+        <input type="submit" value="Delete" class="delete-btn">
       </div>
     </form>
   </div>
